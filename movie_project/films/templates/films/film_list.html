@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Film List</h2>
+        <ul class="list-group">
+            {% for film in films %}
+            <li class="list-group-item">
+                <h3>{{ film.title }}</h3>
+                <p><strong>Description:</strong> {{ film.description }}</p>
+                <p><strong>Review:</strong> {{ film.review }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
